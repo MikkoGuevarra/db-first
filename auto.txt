@@ -6,16 +6,21 @@ modello                         VARCHAR(30), NOT NULL
 anno                            YEAR, NOT NULL
 km_percorsi                     SMALLINT, NOT NULL
 ultima_revisione                DATE, NOT NULL
+ultimo_tagliando                DATE, NOT NULL
 prezzo                          DECIMAL(7, 2), NOT NULL
 colore                          VARCHAR(20), NOT NULL
-targa                           VARCHAR(10), NOT NULL
+targa                           VARCHAR(10), NOT NULL, UNIQUE
 potenza                         VARCHAR(10), NOT NULL
 cavalli                         SMALLINT, NOT NULL
-alimentazione                   VARCHAR(10), NOT NULL
+alimentazione                   VARCHAR(20), NOT NULL
+emissioni                       VARCHAR(20), NOT NULL
 numero_telaio                   VARCHAR(20), NOT NULL, UNIQUE
 posti                           TINYINT, NOT NULL
 porte                           TINYINT, NOT NULL
 cambio                          VARCHAR(10), NOT NULL, DEFAULT('MANUAL')
 quantità                        TINYINT, NOT NULL, DEFAULT(1)
 condizione                      TEXT, NOT NULL
+città                           VARCHAR(20), NOT NULL
+provincia                       VARCHAR(20), NOT NULL
+cap                             TINYINT, NOT NULL
 note                            TEXT
